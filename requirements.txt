@@ -1,0 +1,4 @@
+fpdf
+langchain_google_genai==1.0.7
+flask_cors
+requests

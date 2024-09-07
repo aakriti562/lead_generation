@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #000;
+        }
+        h1 {
+            color: #ff4444;
+        }
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        strong {
+            font-weight: bold;
+            color: #ff4444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated Strategy</h1>
+    <div class="content">
+        <!-- Render formatted content -->
+        {{ generated_content | safe }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Content with LLM</h1>
+        <form action="/generate" method="POST">
+            <label for="strategyType">Select Strategy Type:</label>
+            <select id="strategyType" name="strategyType" required>
+                <option value="General Business Growth Strategy">General Business Growth Strategy</option>
+                <option value="Lead Generation Strategy">Lead Generation Strategy</option>
+                <option value="Social Media Strategy">Social Media Strategy</option>
+                <option value="Business related queries">Business-related Queries</option>
+                <option value="Funding pitch">Funding Pitch</option>
+                <option value="LinkedIn Strategy">LinkedIn Strategy</option>
+            </select>
+
+            <label for="avgSales">Average Sales (in INR):</label>
+            <input type="number" id="avgSales" name="avgSales" required>
+
+            <label for="salesUnit">Average Sales Unit:</label>
+            <input type="text" id="salesUnit" name="salesUnit" required>
+
+            <label for="instaFollowers">Followers on Instagram:</label>
+            <input type="number" id="instaFollowers" name="instaFollowers" required>
+
+            <label for="linkedinFollowers">Followers on LinkedIn:</label>
+            <input type="number" id="linkedinFollowers" name="linkedinFollowers" required>
+
+            <label for="twitterFollowers">Followers on Twitter:</label>
+            <input type="number" id="twitterFollowers" name="twitterFollowers" required>
+
+            <label for="companyDescription">What is the company about?</label>
+            <textarea id="companyDescription" name="companyDescription" rows="3" required></textarea>
+
+            <label for="companyNiche">Niche of the company:</label>
+            <input type="text" id="companyNiche" name="companyNiche" required>
+
+            <label for="targetClients">Target clients for the company:</label>
+            <input type="text" id="targetClients" name="targetClients" required>
+
+            <label for="avgAdBudget">Average Ad Budget (in INR):</label>
+            <input type="number" id="avgAdBudget" name="avgAdBudget" required>
+
+            <label for="returnOnAds">Return on Ads (%):</label>
+            <input type="number" id="returnOnAds" name="returnOnAds" required>
+
+            <button type="submit">Generate Content</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
